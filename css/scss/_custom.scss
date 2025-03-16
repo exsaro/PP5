@@ -123,6 +123,25 @@ h3{
     .logo{
         background-image: url('../images/logo-white.svg');
     }
+    .hamburger{
+        img{
+            filter: invert(1);
+        }
+    }
+}
+.bg-about{
+    .hamburger{
+        img{
+            filter: invert(0);
+        }
+    }
+}
+.bg-home{
+    .hamburger{
+        img{
+            filter: invert(1);
+        }
+    }
 }
 
 header{
@@ -446,18 +465,28 @@ header{
                 }
             }
         }
+        &.career{
+            .cont-sec{
+                width: 30vw;
+            }
+        }
         
         &.contact{
+            position: relative;
             .contact-form{
                 .error{
                     font-size: 12px;
                     font-weight: normal;
-                    color: #E41C44;
+                    color: #e94a66!important;
                 }
             }
             .cont-sec{
-                width: 30vw;
-                padding-left: 100px;
+                width: 50vw;
+                padding-left: 150px;
+                position: absolute;
+                h3,p{
+                    color: #fff;
+                }
                 .contact-sub{
                     ul{
                         padding: 0;
@@ -481,10 +510,12 @@ header{
                 .card{
                     border: none;
                     padding:30px;
-                    background: #F9F9F9;
-                    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+                    background: transparent;
+                    box-shadow: none;
                     label{
-                        font-weight: bold;
+                        font-size: 14px;
+                        color: #fff;
+                        font-weight: normal;
                     }
                     .head{
                         font-size: 16px;
@@ -495,16 +526,17 @@ header{
                     .form-control{
                         border-radius: 0;
                         border-width: 1px;
-                        border-color: #0f325061;
+                        border-color: #092F91;
+                        background: #092F91;
                         padding:22px 15px;
                         font-size: 14px;
+                        color: #fff;
                         font-weight: 700;
                         height: 30px;
                     }
                    
                 }
             }
-            
         }
         
     }
