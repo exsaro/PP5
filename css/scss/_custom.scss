@@ -102,6 +102,9 @@ h3{
 .bg-services{
     background: #EA4965;
 }
+.bg-contact{
+    background: #1547C9;
+}
 
 .logo{
     text-indent: -999em;
@@ -111,30 +114,17 @@ h3{
     display: block;
     background-repeat: no-repeat;
 }
-.bg-home{
+.bg-home,.bg-our-works,.bg-clients,.bg-career{
     .logo{
         background-image: url('../images/logo.svg');
     }
 }
-.bg-about, .bg-services{
+.bg-about, .bg-services,.bg-contact{
     .logo{
         background-image: url('../images/logo-white.svg');
     }
 }
 
-.cust-list{
-    list-style: none;
-    padding: 30px 30px 15px;
-    margin: 0;
-
-    li{
-        background: url('../images/bullet-custom.svg') no-repeat 0px 5px;
-        padding-left: 20px;
-        color: #57576E;
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-}
 header{
     height: 80px;
     display: flex;
@@ -241,42 +231,8 @@ header{
     }
     
 }
-.port-img,.port-img1{
-    position: relative;
-    a{
-        display: block;
-        > img{
-            border: solid 1px #ccc;
-        }
-        span{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            align-items: center;
-            justify-content: center;
-            display: none;
-        }
-        &:hover{
-            span{
-                display: flex;
-            }
-        }
-        &::after{
-            position: absolute;
-            width: calc(100% - 24px);
-            height: 100%;
-            top: 0;
-            left: 12px;
-            content: '';
-            background: linear-gradient(180deg, rgba(9,4,0,0) 42%, rgba(0,0,0,0.8) 100%);
-        }
-    }
 
-}
 .main{
-
     display: flex;
     height: 96vh;
     align-items: center;
@@ -389,65 +345,6 @@ header{
             .cont-sec{
                 width: 60vw;
                 padding-left: 250px;
-                .agnc,.acad{
-                    color: #112146;
-                    background: #FF9DB1;
-                    white-space: nowrap;
-                    position: relative;
-                    text-decoration: underline;
-                    .head-tool{
-                        display: none;
-                        background: #fff;
-                        position: absolute;
-                        padding: 2px 15px;
-                        align-items: center;
-                        box-shadow: 0 7px 61px rgba($color: #CDD0D2, $alpha: 0.94);
-                        top: 71px;
-                        left: 0;
-                        z-index: 99;
-                        &::before{
-                            position: absolute;
-                            content: '';
-                            top: -21px;
-                            left: 0;
-                            background: url('../images/arrow-edge.png') no-repeat;
-                            width: 23px;
-                            height: 21px;
-                        }
-                        .btn-primary{
-                            margin: 0;
-                            padding: 0;
-                            min-width: initial;
-                        }
-                        .icns{
-                            width: 36px;
-                            height: 36px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            background: #F7A5B7;
-                        }
-                        .txts{
-                            font-size: 18px;
-                            font-weight: normal;
-                            font-family: 'Inter', sans-serif;
-                        }
-                    }
-                    &:hover{
-                        text-decoration: none;
-                        .head-tool{
-                            display: flex;
-                        }
-                    }
-                }
-                .acad{
-                    background: #FFD17E;
-                    .head-tool{
-                        .icns{
-                            background: #FFD17E;
-                        }
-                    }
-                }
             }
         }
         &.about{
@@ -465,93 +362,13 @@ header{
             }
             .cont-sec{
                 width: 40vw;
-                // position: absolute;
-                // right: 100px;
                 padding-left: 190px;
                 p{
                     line-height: 30px;
                 }
             } 
-
         }
-        &.course,&.service{
-            .img-sec{
-                width: 31vw;
-                bottom: auto;
-                left: 0;
-                right: auto;
-                text-align: right;
-                display: flex;
-                justify-content: left;
-            }
-            .cont-sec,.cont-sec2{
-                width: 25vw;
-                padding-left: 100px;
-                p{
-                    line-height: 30px;
-                }
-            } 
-            .cont-sec2{
-                right: 100px;
-                width: 20vw;
-                padding-left: 0;
-                background: #F9F9F9;
-                box-shadow: 0 14px 86px rgba(0,0,0,0.15);
-                position: absolute;
-                &::before{
-                    content: '';
-                    position: absolute;
-                    left: -45px;
-                    bottom: 0;
-                    width: 45px;
-                    height: 100px;
-                    background: #FF9DB1;
-                }
-                &::after{
-                    content: '';
-                    position: absolute;
-                    right: 0;
-                    top: -50px;
-                    width: 66px;
-                    height: 50px;
-                    background: #FFD17E;
-                }
-            }
-        }
-        
-        &.our-work{
-            .img-sec{
-                width: 10vw;
-                bottom: auto;
-                left: 0;
-                right: auto;
-                text-align: right;
-                display: flex;
-                justify-content: left;
-            }
-            .img-sec2{
-                width: 50vw;
-                display: flex;
-                justify-content: right;
-                bottom: auto;
-            }
-            .cont-sec{
-                width: 40vw;
-                p{
-                    line-height: 30px;
-                }
-            } 
-
-        }
-        
-
-        &.portfolio{
-            .cont-sec{
-                width: 30vw;
-                padding-left: 80px;
-            }
-        }
-        &.clients{
+        &.services{
             justify-content: space-between;
             .cont-sec{
                 width: 50vw;
@@ -569,6 +386,67 @@ header{
                 justify-content: flex-end;
             }
         }
+        &.our-works{
+            .img-sec{
+                width: 10vw;
+                bottom: auto;
+                left: 0;
+                right: auto;
+                text-align: right;
+                display: flex;
+                justify-content: left;
+            }
+            .img-sec2{
+                width: 50vw;
+                display: flex;
+                justify-content: right;
+                bottom: auto;
+            }
+            .cont-sec{
+                width: 40vw;
+                padding-left: 150px;
+                p{
+                    line-height: 30px;
+                }
+            } 
+        }
+        &.clients{
+            .cont-sec{
+                width: 40vw;
+            }
+            .testimonials{
+                position: relative;
+                padding: 30px 0;
+                p{
+                    color: #04052E;
+                }
+                &::after, &::before{
+                    position: absolute;
+                    content: '';
+                    background: linear-gradient(90deg, rgba(105,184,253,1) 0%, rgba(251,153,164,1) 100%);
+                    height: 10px;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                }
+                &::after{
+                    top: auto;
+                    bottom: 0;
+                }
+                .caption{
+                    strong, span{
+                        display: block;
+                    }
+                    strong{
+                        color: #04052E;
+                    }
+                    span{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        
         &.contact{
             .contact-form{
                 .error{
@@ -626,12 +504,7 @@ header{
                    
                 }
             }
-            .img-sec{
-                width: 10vw;
-                right: auto;
-                left: 0;
-                bottom: auto;
-            }
+            
         }
         
     }
